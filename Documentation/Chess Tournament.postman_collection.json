@@ -1,0 +1,487 @@
+{
+	"info": {
+		"_postman_id": "f101aaa4-05c8-4606-b415-ebb51afef092",
+		"name": "Chess Tournament",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34602501"
+	},
+	"item": [
+		{
+			"name": "Login/Register",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"shokhjahonshomirzayev759@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7777/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verify",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullname\": \"Shohjahon Shomirzayev\",\r\n    \"email\": \"shokhjahonshomirzayev759@gmail.com\",\r\n    \"password\": \"bsjnosnincos55#\",\r\n    \"code\": \"485587\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7777/api/auth/verify",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"auth",
+								"verify"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"shomirzayevshokhjahon@gmail.com\",\r\n    \"password\": \"adminpassword22\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7777/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Players",
+			"item": [
+				{
+					"name": "Get players",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Get player",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7777/api/players/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"players",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create player",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OWJkYjJhMzIxMmJiYTUwODRjM2YyMCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcyMTQ5MDU1MSwiZXhwIjoxNzIxNTAxMzUxfQ.YqlZW7JxHYGUiPZOk8uxcZoc4au-wUdcjMMzD5zo7nw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"John\",\r\n    \"age\": 19,\r\n    \"rating\": 5,\r\n    \"country\": \"US\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7777/api/players",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"players"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit player",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OWJkYjJhMzIxMmJiYTUwODRjM2YyMCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcyMTQ5MDU1MSwiZXhwIjoxNzIxNTAxMzUxfQ.YqlZW7JxHYGUiPZOk8uxcZoc4au-wUdcjMMzD5zo7nw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rating\": 14\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7777/api/players/669bde911ce086e8dd14a2b0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"players",
+								"669bde911ce086e8dd14a2b0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete player",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7777/api/players/669bde911ce086e8dd14a2b0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"players",
+								"669bde911ce086e8dd14a2b0"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tournament",
+			"item": [
+				{
+					"name": "get Tournaments",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "get tournament",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Create Tournament",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OWJkYjJhMzIxMmJiYTUwODRjM2YyMCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcyMTQ5MDU1MSwiZXhwIjoxNzIxNTAxMzUxfQ.YqlZW7JxHYGUiPZOk8uxcZoc4au-wUdcjMMzD5zo7nw",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Victorius\",\r\n    \"startDate\": \"2024-07-25\",\r\n    \"endDate\": \"2024-07-30\",\r\n    \"participants\": [\r\n        \"669bdea21ce086e8dd14a2b2\",\r\n        \"669bdfbef746c66922451ac8\",\r\n        \"669bdec61ce086e8dd14a2b4\"\r\n    ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7777/api/tournaments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"tournaments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Tournament",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Victorius\",\r\n    \"startDate\": \"2024-07-25\",\r\n    \"endDate\": \"2024-07-30\",\r\n    \"participants\": [\r\n        \"669bdea21ce086e8dd14a2b2\",\r\n        \"669bdfbef746c66922451ac8\",\r\n        \"669bdec61ce086e8dd14a2b4\"\r\n    ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7777/api/tournaments/669be1ff52878e0b8c135b3c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"tournaments",
+								"669be1ff52878e0b8c135b3c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Tournament",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7777/api/tournaments/669be1ff52878e0b8c135b3c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"tournaments",
+								"669be1ff52878e0b8c135b3c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Leaderbpard",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7777/api/tournaments/leaderboard/669be415e2b3287e25898de7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"tournaments",
+								"leaderboard",
+								"669be415e2b3287e25898de7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Create matchs",
+			"item": [
+				{
+					"name": "Get Matchs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7777/api/matchs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"matchs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get match",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7777/api/matchs/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"matchs",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create matchs",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tournament\": \"669be415e2b3287e25898de7\",\r\n    \"round\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7777/api/matchs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"matchs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit match",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"result\": \"1-0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7777/api/matchs/669be93c0a3b908f3248899e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"matchs",
+								"669be93c0a3b908f3248899e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete match",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7777/api/matchs/669be93c0a3b908f3248899e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"matchs",
+								"669be93c0a3b908f3248899e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
