@@ -20,14 +20,10 @@
 4. API Documentation:
    -- Dokumentatsiyani Postmanda qildim va u Documentaion file ichida. (Dokumentatsiyani Postmanda Import qilinsa hammasi tayyor)
 
-5. Admin Login.
-   -- Bitta default admin qo'shib qo'ydim.
-
-   email: shomirzayevshokhjahon@gmail.com
-   password: adminpassword22
+5. Create Admin
+-- Admin default qo'shiladi
 
 ## Features
-- MongoDB URI ni tekshirish uchun qulaylik tug'dirishi uchun .env.example da qoldirdim (vazifa tekshirib bo'lingandan keyin gitHub dan bu ma'lumotlani o'chiraman).
 - User uchun login\register qildim va email verification ham qo'shdim(cookies dan foydalanildi).
 - Verify qilayotganda kelgan code ni tasdiqlash uchun Redis dan foydalandim, alohida yana db ochmasdan.
 - Player Managemant uchun CRUD qilindi.
