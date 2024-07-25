@@ -3,34 +3,27 @@
 ## Setup Instructions
 
 1. Install dependencies:
-    
+    ```bash
     npm install
-   
+    ```
 
 2. Set up environment variables:
-
-     .env.example => .env
-   
+    ```bash
+    cp .env.example .env
+    ```
 
 3. Run the application:
-   
-  -- npm start
-    
+    ```bash
+    npm start
+    ```
 
 4. API Documentation:
-   -- Dokumentatsiyani Postmanda qildim va u Documentaion file ichida. (Dokumentatsiyani Postmanda Import qilinsa hammasi tayyor)
-
-5. Create Admin
--- Admin default qo'shiladi
+    - The documentation is created in Postman and is included in the Documentation file. Import it into Postman to access everything.
 
 ## Features
-- User uchun login\register qildim va email verification ham qo'shdim(cookies dan foydalanildi).
-- Verify qilayotganda kelgan code ni tasdiqlash uchun Redis dan foydalandim, alohida yana db ochmasdan.
-- Player Managemant uchun CRUD qilindi.
-- Tournament Management uchun CRUD qilindi.
-- Match Management uchun CRUD qilindi va pairing avtomatik tarzda bo'ladi.
-- Leaderboard Tournament ichiga qo'shildi, tournamentda qatnashayotgan player lar uchun leaderboard chiqazib beradi.
-- Eng muhimi hammasi ishlamoqda va Etilgan hamma vazifalar bajarilgan.
-
-
-
+- Implemented login/register for users and added email verification (using cookies).
+- Used Redis to verify the code sent during verification.
+- Implemented CRUD operations for player management.
+- Implemented CRUD operations for tournament management.
+- Implemented CRUD operations for match management with automatic pairing.
+- Added a leaderboard within the tournament, displaying the leaderboard for players participating in the tournament.
